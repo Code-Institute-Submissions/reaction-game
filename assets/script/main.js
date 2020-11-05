@@ -3,6 +3,7 @@
  //Declared Variables
  const container = document.querySelector(".container");
  const startGame = document.querySelector(".startGame");
+ const cubeImg = document.querySelector(".cubeImg");
  const scoreArea = document.querySelector(".score");
  let player = {
      score : 0
@@ -11,6 +12,7 @@
  //Start button display and random delay before game start
 startGame.addEventListener("click", function() {
     startGame.style.display = "none";
+    cubeImg.style.display = "none";
     let ranTime = Math.random() * 2000 + 1000;
     setTimeout(makeItem, ranTime);
 });
@@ -19,6 +21,7 @@ startGame.addEventListener("click", function() {
 function makeItem() {
     let boundary = container.getBoundingClientRect();
     console.log(boundary);
+
     let div = document.createElement("div");
     div.style.position = "absolute";
     div.style.left = Math.random() * boundary.width + "px";
