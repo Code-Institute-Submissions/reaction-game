@@ -33,6 +33,17 @@ function makeItem() {
     div.style.backgroundColor = "#"+Math.random().toString(16).substr(-6);
     div.style.border = "1px solid black";
     div.startTime = Date.now();
+
+    //Measure reactiontime and display on page as score
+    div.addEventListener("click", function() {
+        let endTime = Date.now();
+        let diff = (endTime - div.startTime)/1000;
+        scoreArea.innerHTML = "Clicked in "+diff+" seconds!";
+        score.innerHTML = score++;
+        startGame.style.display = "block";
+        cubeImg.style.display = "block";  //create a pop up here! & to increment score
+        container.removeChild(div);
+    })
     container.appendChild(div);
 
     console.log(div);

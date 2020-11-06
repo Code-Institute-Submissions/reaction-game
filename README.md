@@ -5,8 +5,8 @@ as well as within different time intervals. The score is based on the reaction t
 
 Follow this link to play the [game](link)
 
-## UX
 ---
+## UX
 My aim is to present a game that is easy to understand and play for all ages. The game is presented on a mobile friendly and easy to 
 navigate web site. Accessible on all platforms to play the game on the go, or in the comforts of their home.
 
@@ -14,32 +14,35 @@ On entering the web site the player shall directly understand how to play the ga
  centered on the page. The headline is stating the purpose of the game and the centered start button, visually enforced by a stark 
  contrasting color, show how to engage with the game.
 
- While playing, the player is able to see the score increase as well as the reactiontime between each "clicked" target. My purpose is that 
- the player is given instant feedback on their performance and interaction.
+ While playing, the player is able to see the score increase as well as the reactiontime between each "clicked" target. My intention is that 
+ the player is given instant feedback on their performance and motivate interaction with the game.
 
- The game ends after x time and a pop up box display the final score with option to resume the game or to return to the home page.
+ The game ends after x time and a pop up box display the final score with an option to resume the game or return to the home page.
 
 ***Player 1***
- > I am a new player and I want to spend some short offtime while playing a fun game to test my performance in some way. I wnat to have some
- > interaction with the game to keep playing. I want to feel challenged and have the ability to improve my score.
+ > I am a new player and I want to spend some short offtime while playing a fun game to test my performance in some way. I want to have some
+ > interaction with the game to feel motivated to keep playing. I want to feel challenged and have the ability to improve my score.
 
 ***Player 2***
  > I am a frequent player and I want to improve my score and reactiontime. I compare my score with friends and family and share my results
  > on my social pages.
 
 ### Design 
-I have chosen the typhography Galindo because of its slight irregularity to give a sense of playfulness and gaming. The more contemporary 
-typography Prompt is chosen to give an easy to read and clear message to the player with a lighter font-weight.
+I have chosen the typhography Galindo because of its slight irregularity to give a sense of childish playfulness and gaming. The more 
+contemporary typography Prompt is chosen to provide an easy to read and clear message to the player with a lighter font-weight.
 
 ![Color scheme](assets/images/color-scheme.png)
 
-The color palette is based on the image of multicolored cubes on the landing site for continoucy
+The color palette is based on the image of multicolored cubes on the landing site and used througout the web site to be consistent with the theme.
+The bright colors with stark contrast is used to enhance the visually hierarchy and guide the player on how to navigate on the web site.
+
+The web site is kept minimalistic in its features to get a modern, timeless feeling and not too be perceived cluttered.
 
 
 [Wireframes](assets/resources/reaction-game_ms2.pdf)
 
-## Features
 ---
+## Features
 In this section, you should go over the different parts of your project, and describe each in a sentence or so.
 
 ### Existing Features
@@ -51,8 +54,9 @@ In addition, you may also use this section to discuss plans for additional featu
 
 ### Features Left to Implement
 ### Another feature idea
-## Technologies Used
 ---
+## Technologies Used
+
 #### Languages
 - ![HTML5 Icon](assets/images/HTML5_Logo_32.png)
 - CSS3
@@ -83,8 +87,9 @@ You should also mention in this section any interesting bugs or problems you dis
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
 
-## Deployment
 ---
+## Deployment
+
 This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
 
 In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
@@ -94,15 +99,14 @@ Different configuration files?
 Separate git branch?
 In addition, if it is not obvious, you should also describe how to run your code locally.
 
+---
 ## Credits
----
 ### Content
----
 The text is written by myself.
 ### Media
----
 The photos and illustrations used in this site were obtained from [Pixabay](https://pixabay.com/).
-## Acknowledgements
+
 ---
+## Acknowledgements
 I received inspiration and placed the foundation for this project from a 
 [Udemy Javascript course](https://www.udemy.com/course/javascript-training/) by Laurence Svekis.
