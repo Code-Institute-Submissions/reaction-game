@@ -39,12 +39,26 @@ function makeItem() {
         let endTime = Date.now();
         let diff = (endTime - div.startTime)/1000;
         scoreArea.innerHTML = "Clicked in "+diff+" seconds!";
-        score.innerHTML = score++;
-        startGame.style.display = "block";
-        cubeImg.style.display = "block";  //create a pop up here! & to increment score
+        //Incrementing score
+        currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
+            if (diff < 1){
+                currentScore += 10;
+            } else {
+                currentScore += 5;
+            } 
+        document.querySelector(".scoreText").innerHTML = currentScore;
+
+        clearTimeout(div.timer);
+        makeItem();
+        container.removeChild(div);  
+    });
+
+    //Time interval for show and hide elements
+    div.timer = setTimeout(function() {
         container.removeChild(div);
-    })
+        makeItem();
+    }, 1400);
+
     container.appendChild(div);
 
-    console.log(div);
 }
