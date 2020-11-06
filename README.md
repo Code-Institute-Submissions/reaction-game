@@ -1,26 +1,42 @@
 # Catch Me If You Can
-Catch me if you can is a reaction game where the player, in a playful setting, can test how fast he, or she can click on a square item.  
-The items will show themselfes randomly on the webpage both in position as well as within different time intervals. The players goal
- is to click on as many items as possible before the game ends. The score is based on the reaction time.
-
+Catch Me If You Can is a game to test the players reaction time.  In a playful setting the goal of the game is for the player to 
+click on as many items possible before the game ends. The items will show themselfes randomly on the webpage both in position 
+as well as within different time intervals. The score is based on the reaction time.
 
 Follow this link to play the [game](link)
 
 ## UX
 ---
+My aim is to present a game that is easy to understand and play for all ages. The game is presented on a mobile friendly and easy to 
+navigate web site. Accessible on all platforms to play the game on the go, or in the comforts of their home.
+
+On entering the web site the player shall directly understand how to play the game and the positive expected outcome by a welcoming text
+ centered on the page. The headline is stating the purpose of the game and the centered start button, visually enforced by a stark 
+ contrasting color, show how to engage with the game.
+
+ While playing, the player is able to see the score increase as well as the reactiontime between each "clicked" target. My purpose is that 
+ the player is given instant feedback on their performance and interaction.
+
+ The game ends after x time and a pop up box display the final score with option to resume the game or to return to the home page.
+
+***Player 1***
+ > I am a new player and I want to spend some short offtime while playing a fun game to test my performance in some way. I wnat to have some
+ > interaction with the game to keep playing. I want to feel challenged and have the ability to improve my score.
+
+***Player 2***
+ > I am a frequent player and I want to improve my score and reactiontime. I compare my score with friends and family and share my results
+ > on my social pages.
+
+### Design 
+I have chosen the typhography Galindo because of its slight irregularity to give a sense of playfulness and gaming. The more contemporary 
+typography Prompt is chosen to give an easy to read and clear message to the player with a lighter font-weight.
+
+![Color scheme](assets/images/color-scheme.png)
+
+The color palette is based on the image of multicolored cubes on the landing site for continoucy
 
 
 [Wireframes](assets/resources/reaction-game_ms2.pdf)
-
-Use this section to provide insight into your UX process, focusing on who this website is for, what it is that they want to 
-achieve and how your project is the best way to help them achieve these things.
-
-In particular, as part of this section we recommend that you provide a list of User Stories, with the following general structure:
-
-As a user type, I want to perform an action, so that I can achieve a goal.
-This section is also where you would share links to any wireframes, mockups, diagrams etc. that you created as part of the 
-design process. These files should themselves either be included as a pdf file in the project itself (in an separate directory), 
-or just hosted elsewhere online and can be in any format that is viewable inside the browser.
 
 ## Features
 ---
