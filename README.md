@@ -101,6 +101,8 @@ In addition, if it is not obvious, you should also describe how to run your code
 
 ---
 ## Credits
+- [Udemy Javascript course](https://www.udemy.com/course/javascript-training/) by Laurence Svekis.
+- [CSS-Tricks Animated Countdown Timer](https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/)
 ### Content
 The text is written by myself.
 ### Media
