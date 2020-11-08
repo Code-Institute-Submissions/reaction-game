@@ -76,7 +76,7 @@ document.getElementById("app").innerHTML = `
                 <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"/>
             </g>
         </svg>
-        <span id="base-timer-label class="base-timer__label">
+        <span id="base-timer-label" class="base-timer__label">
             ${formatTime(timeLeft)}
         </span>
     </div>
