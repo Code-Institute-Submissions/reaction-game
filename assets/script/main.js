@@ -39,6 +39,7 @@ function makeItem() {
         let endTime = Date.now();
         let diff = (endTime - div.startTime)/1000;
         scoreArea.innerHTML = "Clicked in "+diff+" seconds!";
+
         //Incrementing score
         currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
             if (diff < 1){
@@ -62,7 +63,12 @@ function makeItem() {
     container.appendChild(div);
 }
 
-//Code from Css-Tricks Animated Countdown Timer
+//Credit: Css-Tricks Animated Countdown Timer
+const TIME_LIMIT = 20;
+let timePassed = 0;
+let timeLeft = TIME_LIMIT;
+let timerInterval = null;
+
 document.getElementById("app").innerHTML = `
     <div class="base-timer">
         <svg class="base-timer__svg" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -70,8 +76,29 @@ document.getElementById("app").innerHTML = `
                 <circle class="base-timer__path-elapsed" cx="50" cy="50" r="45"/>
             </g>
         </svg>
-        <span>
-            <!-- Remaining time label -->
+        <span id="base-timer-label class="base-timer__label">
+            ${formatTime(timeLeft)}
         </span>
     </div>
 `;
+startTimer();
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+        timePassed = timePassed += 1;
+        timeLeft = TIME_LIMIT - timePassed;
+
+    document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
+    }, 1000);
+}
+
+//Timer text display
+function formatTime(time) {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+    if (seconds < 10) {
+        seconds = `0${seconds}`;
+    }
+    return `${minutes}:${seconds}`;
+}
+
