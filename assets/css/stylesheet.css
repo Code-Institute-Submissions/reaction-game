@@ -16,6 +16,10 @@ html, body {
     height: 100%;
 }
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
 /* -------- Gameboard -------- */
 
 .container {
@@ -25,17 +29,18 @@ html, body {
     height: 100%;
     text-align: center;
     margin: auto;
-    margin-top: 6%;
+   
 }
 
 .container h1 {
     font-family: 'Galindo', 'Prompt', sans-serif;
     font-weight: 300;
-    font-size: 40rem;
+    font-size: 48rem;
     color: #f28705;
     text-transform: capitalize;
     text-align: center;
     justify-content: center;
+    margin-top: 6%;
 }
 
 .btn {
@@ -49,14 +54,13 @@ html, body {
     color: #fff;
     background-color: #bd1fbf;
     border-radius: 8rem;
-    justify-content: center;
     cursor: pointer;
 }
 
 .score, .scoreText {
     font-family: 'Prompt', sans-serif;
     font-weight: 300;
-    font-size: 28rem;
+    font-size: 32rem;
     color: #333;
     padding: 5rem;
     width: 40%;
@@ -68,6 +72,7 @@ html, body {
     height: auto;
     justify-content: center;
     align-items: flex-end;
+    margin-top: 20rem;
 }
 
 /* -------- Animated Timer -------- */
@@ -75,8 +80,8 @@ html, body {
 
 .base-timer {
     position: relative;
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
 }
 
 .base-timer__circle {
@@ -91,8 +96,8 @@ html, body {
 
 .base-timer__label {
   position: absolute;
-  width: 300px;
-  height: 300px;
+  width: 200px;
+  height: 200px;
   top: 0;
   display: flex;
   align-items: center;
@@ -125,4 +130,28 @@ html, body {
 
 .base-timer__path-remaining.red {
     color: #f21905;
+}
+
+@media only screen and (max-width: 440px) {
+    .base-timer {
+        height: 100px;
+        width: 100px;
+    }
+    .base-timer__label {
+        width: 100px;
+        height: 100px;
+        font-size: 38rem;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .container h1 {
+         font-size: 68rem;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    .container h1 {
+         font-size: 58rem;
+    }
 }

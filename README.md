@@ -1,7 +1,7 @@
 # Catch Me If You Can
-Catch Me If You Can is a game to test the players reaction time.  In a playful setting the goal of the game is for the player to 
-click on as many items possible before the game ends. The items will show themselfes randomly on the webpage both in position 
-as well as within different time intervals. The score is based on the reaction time.
+Catch Me If You Can is a game to test the players reaction time.  In a playful setting the goal is for the player to 
+click on as many items possible before the set timeframe of the game ends. The target items will show themselfes randomly on the webpage in position 
+as well as within various time intervals. The score is based on the reaction time.
 
 Follow this link to play the [game](link)
 
