@@ -76,11 +76,6 @@ Whenever it is feasible, prefer to automate your tests, and if you've done so, p
 
 For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
 
-Contact form:
-Go to the "Contact Us" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
 In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
 
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
@@ -90,25 +85,29 @@ If this section grows too long, you may want to split it off into a separate fil
 ---
 ## Deployment
 
-This section should describe the process you went through to deploy the project to a hosting platform (e.g. GitHub Pages or Heroku).
+Following steps were taken to deploy my project to GitHub Pages:
 
-In particular, you should provide all details of the differences between the deployed version and the development version, if any, including:
+- Logged in to GitHUb account and selected the repository to deploy.
+- Locate the 'Settings' button in the meny bar above the repository and scroll down to 'GitHub Pages'.
+- In the drop-down meny directly beneath 'Source', select 'master branch'. The page will refresh automatically.
+- Locate the deployed link in the repositorys main 'GitHub Pages'section.
 
-Different values for environment variables (Heroku Config Vars)?
-Different configuration files?
-Separate git branch?
-In addition, if it is not obvious, you should also describe how to run your code locally.
+Following steps will be taken to fork the repository, to update or make changes to the repository:
+
+- Login to my GitHub account and repository page.
+- Locate the 'Fork' button in the top right corner of the page, above 'Settings'.
+- Clicking the "Fork' button gives me a copy of the repository in my GitHub account.
 
 ---
 ## Credits
 - [Udemy Javascript course](https://www.udemy.com/course/javascript-training/) by Laurence Svekis.
 - [CSS-Tricks Animated Countdown Timer](https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/)
 ### Content
-The text is written by myself.
+The textual content is written by myself, Helena Plantin.
 ### Media
-The photos and illustrations used in this site were obtained from [Pixabay](https://pixabay.com/).
+The photos and illustrations used in this project were obtained from [Pixabay](https://pixabay.com/).
 
 ---
 ## Acknowledgements
-I received inspiration and placed the foundation for this project from a 
+I received inspiration and placed the foundation for this project while attending a 
 [Udemy Javascript course](https://www.udemy.com/course/javascript-training/) by Laurence Svekis.
