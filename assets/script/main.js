@@ -14,7 +14,7 @@
 
  //Start button display and random delay before game start
 startGame.addEventListener("click", function() {
-    startGame.style.display = "none";
+    startGame.style.display = "none";                   //TODO show and start timer
     cubeImg.style.display = "none";
     let ranTime = Math.random() * 2000 + 1000;
     setTimeout(makeItem, ranTime);
@@ -82,7 +82,7 @@ const COLOR_CODES = {
 };
 
 //Credit: Css-Tricks Animated Countdown Timer
-const TIME_LIMIT = 20;
+const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
