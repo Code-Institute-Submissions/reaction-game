@@ -10,12 +10,14 @@
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
  const ALERT_THRESHOLD = 5;
+ 
 
 
  //Start button display and random delay before game start
 startGame.addEventListener("click", function() {
-    startGame.style.display = "none";                   //TODO show and start timer
+    startGame.style.display = "none";                   
     cubeImg.style.display = "none";
+    app.style.display = "block";
     let ranTime = Math.random() * 2000 + 1000;
     setTimeout(makeItem, ranTime);
 });
@@ -87,6 +89,8 @@ let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
+app.style.display = "none";
+
 
 document.getElementById("app").innerHTML = `
     <div class="base-timer">
@@ -113,6 +117,7 @@ startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
+  //TODO: initiate modal
 }
 
 function startTimer() {
