@@ -1,4 +1,4 @@
- //Code credit to Udemy course Javascript Fundamentals by Laurence Svekis
+ //Code: credit to Laurence Svekis, Udemy Course Javascript Fundamentals
  //Declared Variables
  const container = document.querySelector(".container");
  const startGame = document.querySelector(".startGame");
@@ -6,7 +6,7 @@
  const scoreArea = document.querySelector(".score");
  let player = {
      score : 0
- };
+ }
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
  const ALERT_THRESHOLD = 5;
@@ -81,7 +81,7 @@ const COLOR_CODES = {
         color: "red",
         threshold: ALERT_THRESHOLD
     }
-};
+}
 
 //Credit: Css-Tricks Animated Countdown Timer
 const TIME_LIMIT = 60;
@@ -113,6 +113,7 @@ document.getElementById("app").innerHTML = `
     </div>
 `;
 
+
 startTimer();
 
 function onTimesUp() {
@@ -130,6 +131,7 @@ function startTimer() {
 
     if (timeLeft === 0) {
       onTimesUp();
+      
     }
 }, 1000);
 }
@@ -177,3 +179,22 @@ function setCircleDasharray() {
     .getElementById("base-timer-path-remaining")
     .setAttribute("stroke-dasharray", circleDasharray);
 }
+
+// Credit: Sabe.io Modal
+const modal = document.querySelector(".modal");
+const trigger = document.querySelector(".trigger");
+const closebutton = document.querySelector(".closeButton");
+
+function toggleModal () {
+    modal.classList.toggle("show-modal");
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
