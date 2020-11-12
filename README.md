@@ -101,7 +101,10 @@ Following steps will be taken to fork the repository, to update or make changes 
 ---
 ## Credits
 - [Udemy Javascript course](https://www.udemy.com/course/javascript-training/) by Laurence Svekis.
+<br>Modified for suitability with other features such as score counter and timer.
 - [CSS-Tricks Animated Countdown Timer](https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/)
+- [SABE Modal Pop Up Box](https://sabe.io/tutorials/how-to-create-modal-popup-box)
+<br>Modified to be activated by timer instead of button.
 ### Content
 The textual content is written by myself, Helena Plantin.
 ### Media
