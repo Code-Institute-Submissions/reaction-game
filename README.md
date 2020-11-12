@@ -15,9 +15,9 @@ On entering the web site the player shall directly understand how to play the ga
  contrasting color, show how to engage with the game.
 
  While playing, the player is able to see the score increase as well as the reactiontime between each "clicked" target. My intention is that 
- the player is given instant feedback on their performance and motivate interaction with the game.
+ the player is given instant feedback on their performance and to motivate interaction with the game.
 
- The game ends after x time and a pop up box display the final score with an option to resume the game or return to the home page.
+ The game ends after 60 seconds time and a pop up box display the final score with an option to resume the game or return to the home page.
 
 ***Player 1***
  > I am a new player and I want to spend some short offtime while playing a fun game to test my performance in some way. I want to have some
@@ -43,17 +43,25 @@ The web site is kept minimalistic in its features to get a modern, timeless feel
 
 ---
 ## Features
-In this section, you should go over the different parts of your project, and describe each in a sentence or so.
+The web application is designed to be mobile friendly and responsive on all screen sizes, though the game  is not designed to suit mobile devices
+in a landscape position where I believe the gameboard will be to small.
 
 ### Existing Features
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
-For some/all of your features, you may choose to reference the specific project files that implement them, although this is entirely optional.
-
-In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
+**Start Game Button** - allows players to start interacting with the game. The button triggers the timer to 
+initiate the 60 seconds countdown and the function to show target items on page.<br>
+**Target Items** - is randomly positioned on page in different intervals. When clicked the score will increment by 10 
+if the target items is clicked within 1 second, and by 5 if the item is clicked over 1 second. The player will be
+able to follow the time difference between each clicked items which is updated at the bottom of the gameboard.<br>
+**Timer** - closing to end of game time the timer visually enhances this by changing color to yellow followed by red.<br>
+**Modal** - the modal will pop up when game end and will show the player his or hers total score. The player will at this 
+time have a two choices presented on two buttons: resume the game or go to the home page.
 
 ### Features Left to Implement
-### Another feature idea
+- Levels of difficulty by offering three sets of timeframes (beginner, intermediate and advanced).
+- Some target items of a certain color decrease the score when clicked. The player needs to be fast and attentive.
+- A scoreboard for players to register their score and compare with others on the web page.
+- Links to social media to share your score with family and friends.
+
 ---
 ## Technologies Used
 
