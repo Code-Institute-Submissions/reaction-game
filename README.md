@@ -15,7 +15,7 @@ On entering the web site the player shall directly understand how to play the ga
  contrasting color, show how to engage with the game.
 
  While playing, the player is able to see the score increase as well as the reactiontime between each "clicked" target. My intention is that 
- the player is given instant feedback on their performance and to motivate interaction with the game.
+ the player is given instant feedback on their performance to motivate interaction with the game.
 
  The game ends after 60 seconds time and a pop up box display the final score with an option to resume the game or return to the home page.
 

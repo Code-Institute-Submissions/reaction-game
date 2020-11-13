@@ -8,7 +8,7 @@
     <title>Reaction Game</title>
 </head>
 <body>
-        <div class="container">
+        <div class="container" id="home">
             <h1>Catch me if you can!</h1>
                 <p class="pText">
                     Are you as fast as you think you are? 
@@ -21,15 +21,15 @@
                 <div class="startGame btn">Start Game</div>
                 <img class="cubeImg" src="assets/images/colored-cubes(1).png" alt="Multi colored cubes in a pile">
         </div>
-        <button class="trigger">Click here to trigger the modal!</button><!--exchange later for js event-->
+        <button class="trigger">Click here to trigger the modal!</button><!--TODO: exchange later for js event-->
         <div class="modal">
             <div class="modal-content">
                 <span class="closeButton">&times;</span>
                 <h1>Great Job!</h1>
-                    <p>You Scored: </p>
-                    <div>
-                        <a href="#" type="button" class="btn btn-primary restartGameBtn">Play Again</a>
-                        <a href="#" type="button" class="btn  btn-primary homeBtn">Home</a>
+                    <p>Total score: </p>
+                    <div class="flex-container">
+                        <div><a href="#" type="button" class="btn btn-primary restartGameBtn">Play Again</a></div>
+                        <div><a href="#home" type="button" class="btn  btn-primary homeBtn">Back Home</a></div>
                     </div>
             </div>
         </div>

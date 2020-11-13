@@ -4,20 +4,21 @@
  const startGame = document.querySelector(".startGame");
  const cubeImg = document.querySelector(".cubeImg");
  const scoreArea = document.querySelector(".score");
+ const pText = document.querySelector(".pText")
  let player = {
      score : 0
  }
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
  const ALERT_THRESHOLD = 5;
- 
-
+ let scoreText = 
 
  //Start button display and random delay before game start
 startGame.addEventListener("click", function() {
     startGame.style.display = "none";                   
     cubeImg.style.display = "none";
     app.style.display = "block";
+    pText.style.display = "none";
     let ranTime = Math.random() * 2000 + 1000;
     setTimeout(makeItem, ranTime);
 });
@@ -39,33 +40,33 @@ function makeItem() {
     div.style.border = "1px solid black";
     div.startTime = Date.now();
 
-    //Measure reactiontime and display on page as score
-    div.addEventListener("click", function() {
-        let endTime = Date.now();
-        let diff = (endTime - div.startTime)/1000;
-        scoreArea.innerHTML = "Clicked in "+diff+" seconds!";
+//Measure reactiontime and display on page as score
+div.addEventListener("click", function() {
+    let endTime = Date.now();
+    let diff = (endTime - div.startTime)/1000;
+    scoreArea.innerHTML = "Clicked in "+diff+" seconds!";
 
-        //Incrementing score
-        currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
-            if (diff < 1){
-                currentScore += 10;
-            } else {
-                currentScore += 5;
-            } 
-        document.querySelector(".scoreText").innerHTML = currentScore;
+    //Incrementing score
+    currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
+        if (diff < 1){
+            currentScore += 10;
+        } else {
+            currentScore += 5;
+        } 
+    document.querySelector(".scoreText").innerHTML = currentScore;
 
-        clearTimeout(div.timer);
-        makeItem();
-        container.removeChild(div);  
-    });
+    clearTimeout(div.timer);
+    makeItem();
+    container.removeChild(div);  
+});
 
-    //Time interval for show and hide elements
-    div.timer = setTimeout(function() {
-        container.removeChild(div);
-        makeItem();
-    }, 1400);
+//Time interval for show and hide elements
+div.timer = setTimeout(function() {
+    container.removeChild(div);
+    makeItem();
+}, 1400);
 
-    container.appendChild(div);
+container.appendChild(div);
 }
 
 //Credit: Mateusz Rybczonec, CSS-Trick for colored animation
@@ -180,10 +181,10 @@ function setCircleDasharray() {
     .setAttribute("stroke-dasharray", circleDasharray);
 }
 
-// Credit: Sabe.io Modal
+// Credit: Sabe.io Modal Pop Up
 const modal = document.querySelector(".modal");
 const trigger = document.querySelector(".trigger");
-const closebutton = document.querySelector(".closeButton");
+const closeButton = document.querySelector(".closeButton");
 
 function toggleModal () {
     modal.classList.toggle("show-modal");
