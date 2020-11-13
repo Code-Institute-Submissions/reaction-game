@@ -4,14 +4,14 @@
  const startGame = document.querySelector(".startGame");
  const cubeImg = document.querySelector(".cubeImg");
  const scoreArea = document.querySelector(".score");
- const pText = document.querySelector(".pText")
+ const pText = document.querySelector(".pText");
  let player = {
      score : 0
  }
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
  const ALERT_THRESHOLD = 5;
- let scoreText = 
+ let makeItemTO;
 
  //Start button display and random delay before game start
 startGame.addEventListener("click", function() {
@@ -119,6 +119,7 @@ startTimer();
 
 function onTimesUp() {
   clearInterval(timerInterval);
+  modal.classList.toggle("show-modal");
   //TODO: initiate modal
 }
 
@@ -196,6 +197,6 @@ function windowOnClick(event) {
     }
 }
 
-trigger.addEventListener("click", toggleModal);
+//trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
