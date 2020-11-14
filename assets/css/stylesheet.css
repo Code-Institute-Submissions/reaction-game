@@ -215,13 +215,6 @@ html, body {
     text-decoration: none;
 }
 
-.homeBtn {
-    background-color: #87880a;
-    text-decoration: none;
-   
-    
-}
-
 /* -------- Media Query -------- */
 
 @media only screen and (max-width: 440px) {
@@ -256,12 +249,6 @@ html, body {
     .modal-content {
         width: 85%;
         height: 50%;
-    }
-}
-
-@media only screen and (max-width: 700px) {
-    .flex-container > div{
-        flex-direction: column;
     }
 }
 
