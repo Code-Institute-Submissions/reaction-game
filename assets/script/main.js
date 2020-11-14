@@ -8,9 +8,6 @@
  const pText = document.querySelector(".pText");
  const userScore = document.querySelector(".userScore");
 
- let player = {
-     score : 0
- }
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
  const ALERT_THRESHOLD = 5;
@@ -102,7 +99,7 @@ const COLOR_CODES = {
 }
 
 //Credit: Css-Tricks Animated Countdown Timer
-const TIME_LIMIT = 60;
+const TIME_LIMIT = 20;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
@@ -207,11 +204,4 @@ function toggleModal () {
     modal.classList.toggle("show-modal");
 }
 
-function windowOnClick(event) {
-    if (event.target === modal) {
-        toggleModal();
-    }
-}
-
 closeButton.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
