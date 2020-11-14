@@ -5,13 +5,14 @@
  const cubeImg = document.querySelector(".cubeImg");
  const scoreArea = document.querySelector(".score");
  const pText = document.querySelector(".pText");
+ const userScore = document.querySelector(".userScore");
+
  let player = {
      score : 0
  }
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
  const ALERT_THRESHOLD = 5;
- let makeItemTO;
 
  //Start button display and random delay before game start
 startGame.addEventListener("click", function() {
@@ -46,14 +47,15 @@ div.addEventListener("click", function() {
     let diff = (endTime - div.startTime)/1000;
     scoreArea.innerHTML = "Clicked in "+diff+" seconds!";
 
-    //Incrementing score
-    currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
-        if (diff < 1){
-            currentScore += 10;
-        } else {
-            currentScore += 5;
-        } 
-    document.querySelector(".scoreText").innerHTML = currentScore;
+//Incrementing score
+currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
+    if (diff < 1){
+        currentScore += 10;
+    } else {
+        currentScore += 5;
+    } 
+document.querySelector(".scoreText").innerHTML = currentScore;
+
 
     clearTimeout(div.timer);
     makeItem();
@@ -67,6 +69,19 @@ div.timer = setTimeout(function() {
 }, 1400);
 
 container.appendChild(div);
+}
+
+/*End Game - 'set the timeout globally and then clear the interval div.timer
+ change to any global value and remove the interval'*/
+setTimeout;
+
+function endGame() {    
+  if (timeLeft === 0){
+     clearInterval(div.timer);
+  } 
+  else {      
+    makeItem;
+    }
 }
 
 //Credit: Mateusz Rybczonec, CSS-Trick for colored animation
@@ -120,7 +135,7 @@ startTimer();
 function onTimesUp() {
   clearInterval(timerInterval);
   modal.classList.toggle("show-modal");
-  //TODO: initiate modal
+  document.querySelector(".userScore").innerHTML = ("Total score: ") + currentScore;
 }
 
 function startTimer() {
@@ -133,7 +148,6 @@ function startTimer() {
 
     if (timeLeft === 0) {
       onTimesUp();
-      
     }
 }, 1000);
 }
@@ -197,6 +211,5 @@ function windowOnClick(event) {
     }
 }
 
-//trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);

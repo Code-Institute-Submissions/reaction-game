@@ -115,7 +115,7 @@ html, body {
   font-size: 44rem;
 }
 
-/* -------- Timer Color Animation -------- */
+/* -------- Timer & Color Animation -------- */
 
 .base-timer__path-remaining {
     stroke-width: 7px;
@@ -188,7 +188,7 @@ html, body {
     color: #f28705;
 }
 
-.modal-content p {
+.userScore {
     text-align: center;
     font-family: 'Prompt', sans-serif;
     font-weight: 300;
