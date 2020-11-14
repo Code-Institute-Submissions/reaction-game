@@ -4,6 +4,7 @@
  const startGame = document.querySelector(".startGame");
  const cubeImg = document.querySelector(".cubeImg");
  const scoreArea = document.querySelector(".score");
+ const heading = document.querySelector(".heading");
  const pText = document.querySelector(".pText");
  const userScore = document.querySelector(".userScore");
 
@@ -19,6 +20,7 @@ startGame.addEventListener("click", function() {
     startGame.style.display = "none";                   
     cubeImg.style.display = "none";
     app.style.display = "block";
+    heading.style.display = "none"
     pText.style.display = "none";
     let ranTime = Math.random() * 2000 + 1000;
     setTimeout(makeItem, ranTime);
