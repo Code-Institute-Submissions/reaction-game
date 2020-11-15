@@ -1,5 +1,5 @@
- //Code: credit to Laurence Svekis, Udemy Course Javascript Fundamentals
- //Declared Variables
+//Code: credit to Laurence Svekis, Udemy Course Javascript Fundamentals
+//Declared Variables
  const container = document.querySelector(".container");
  const startGame = document.querySelector(".startGame");
  const cubeImg = document.querySelector(".cubeImg");
@@ -7,6 +7,8 @@
  const heading = document.querySelector(".heading");
  const pText = document.querySelector(".pText");
  const userScore = document.querySelector(".userScore");
+ const scoreText = document.querySelector(".scoreText");
+ scoreText.style.display = "none";
 
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
@@ -18,6 +20,7 @@ startGame.addEventListener("click", function() {
     startGame.style.display = "none";                   
     cubeImg.style.display = "none";
     app.style.display = "block";
+    scoreText.style.display = "block";
     heading.style.display = "none"
     pText.style.display = "none";
     let ranTime = Math.random() * 2000 + 1000;
@@ -63,7 +66,7 @@ document.querySelector(".scoreText").innerHTML = currentScore;
     container.removeChild(div);  
 });
 
-//Time interval for show and target elements
+//Time interval to show and target elements
 div.timer = setTimeout(function() {
     container.removeChild(div);
     makeItem();
@@ -74,7 +77,19 @@ container.appendChild(div);
 
 /*End Game - 'set the timeout globally and then clear the interval div.timer
  change to any global value and remove the interval'*/
+setTimeout;
 
+function endGame() {
+    if(timeleft === 0)
+    clearInterval(div.timer);
+}
+
+//When game time runs out
+ function onTimesUp() {
+    clearInterval(timerInterval);
+    modal.classList.toggle("show-modal");
+    document.querySelector(".userScore").innerHTML = ("Total score: ") + currentScore;
+}
 
 //Credit: Mateusz Rybczonec, CSS-Trick for colored animation
 const COLOR_CODES = {
@@ -92,6 +107,7 @@ const COLOR_CODES = {
 }
 
 //Credit: Css-Tricks Animated Countdown Timer
+//Declared variables
 const TIME_LIMIT = 20;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
@@ -120,12 +136,6 @@ document.getElementById("app").innerHTML = `
         </span>
     </div>
 `;
-
-function onTimesUp() {
-    clearInterval(timerInterval);
-    modal.classList.toggle("show-modal");
-    document.querySelector(".userScore").innerHTML = ("Total score: ") + currentScore;
-}
 
 function startTimer() {
     timerInterval = setInterval(() => {
@@ -188,9 +198,15 @@ function setCircleDasharray() {
 // Credit: Sabe.io Modal Pop Up
 const modal = document.querySelector(".modal");
 const closeButton = document.querySelector(".closeButton");
+const restartGameBtn = document.querySelector(".restartGameBtn");
 
+//Show modal
 function toggleModal () {
     modal.classList.toggle("show-modal");
 }
 
+//Hide modal
 closeButton.addEventListener("click", toggleModal);
+restartGameBtn.addEventListener("click", toggleModal);
+   
+
