@@ -57,8 +57,7 @@ The web site is kept minimalistic in its features to mediate a modern, timeless 
 
 ---
 ## Features
-The web application is designed to be mobile-friendly and responsive on all screen sizes, though the game  is not designed to suit mobile devices
-in a landscape position where I believe the gameboard will be too small.
+The web application is designed to be mobile-friendly and responsive on all screen sizes.
 
 ### Existing Features
 **Start Game Button** 
@@ -74,7 +73,7 @@ able to follow the time difference between each clicked item which is updated at
 <br>Closing to end of game time the timer visually enhances this by changing color to yellow followed by red.<br>
 
 **Modal**
-<br>The modal will pop up when the game end and will show the player his or her total score. The player will at this time have two choices presented on two buttons: resume the game or go to the home page.
+<br>A modal pop up when the game end and will show the player his or her total score. The player will at this time have two choices presented on two buttons: resume the game or go to the home page.
 
 ### Future Features
 - Levels of difficulty by offering three sets of timeframes (beginner, intermediate, and advanced).
@@ -94,7 +93,10 @@ able to follow the time difference between each clicked item which is updated at
 - [Google Fonts](https://fonts.google.com/)
 - [Adobe Color](https://color.adobe.com/sv/create/color-wheel)
 - Grammarly Text editor
-
+- [Balsamiq Wireframes](https://balsamiq.com/)
+- [Tiny.png](https://tinypng.com/)
+- [Pixabay](https://pixabay.com/)
+- [Techsini Mockup Generator](http://techsini.com/)
 
 ---
 ## Testing
@@ -109,6 +111,14 @@ In addition, you should mention in this section how your project looks and works
 You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
 
 If this section grows too long, you may want to split it off into a separate file and link to it from here.
+- [Techsini](http://techsini.com/) responsive test and mockup generator
+- [Autoprefixer](https://autoprefixer.github.io/)
+- [HTML Validator](https://validator.w3.org/)
+- [CSS Validator](https://jigsaw.w3.org/css-validator/)
+- [JsHint](https://jshint.com/)
+- [Google Mobile Friendly](https://search.google.com/test/mobile-friendly) test
+- [GTmetrix](https://gtmetrix.com/) To test speed and loading time
+- [WebAim](https://webaim.org/resources/contrastchecker/) Contrast checker
 
 ---
 ## Deployment
@@ -162,9 +172,12 @@ please visit this [Git Tutorial](https://www.atlassian.com/git/tutorials/setting
 <br>*Modified to be activated by timer instead of button.*
 - Code Institute LMS
 <br>*General source of information*
-- Stack Overflow, W3School, Mozilla Markdown
+- Stack Overflow, W3School, Mozilla MDN
 <br>*General source of information*
-- Code Institute Slack Channel
+- Code Institute Slack Channel<br>
+- [Atlassian Bitbucket](https://www.atlassian.com/git)
+<br>*General source of information
+
 
 ### Content
 The textual content is written by myself, Helena Plantin.
