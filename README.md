@@ -1,7 +1,9 @@
+![Image of four different screensizes](assets/images/mockup.png)
+
 # Catch Me If You Can
 Catch Me If You Can is a game to test the player's reaction time.  In a playful setting, the goal is for the player to 
 click on as many items possible before the set timeframe of the game ends. The target items will show themselves randomly 
-on the webpage in position as well as within various time intervals. The score is based on the reaction time.
+on the webpage, in position as well as within various time intervals. The score is based on the reaction time.
 
 Follow this link to play the [game](link)
 
@@ -28,7 +30,7 @@ welcoming text centered on the page. The headline is stating the purpose of the 
  While playing, the player can see the score increase as well as the reaction time between each "clicked" target. 
  My intention is that the player is given instant feedback on their performance to motivate interaction with the game.
 
- The game ends after 60 seconds and a pop-up box display the final score with an option to resume the game or return to the home page.
+ The game ends after 60 seconds and a pop-up box display the final score with the option to resume the game.
 
 ***Player 1***
  > *I am a new player and I want to spend some short offtime while playing a fun game to test my performance in some way. 
@@ -59,14 +61,22 @@ The web application is designed to be mobile-friendly and responsive on all scre
 in a landscape position where I believe the gameboard will be too small.
 
 ### Existing Features
-**Start Game Button** - allows players to start interacting with the game. The button triggers the timer to initiate the 60 seconds countdown and the function to show target items on the page.<br>
-**Target Items** - is randomly positioned on the page at various intervals. When clicked the score will increment by 10 
+**Start Game Button** 
+<br>Allows players to start interacting with the game. The button triggers the timer to initiate the 60 seconds countdown and 
+the function to show target items on the page.<br>
+
+**Target Items**
+<br>Is randomly positioned on the page at various intervals. When clicked the score will increment by 10 
 if the target items are clicked within 1 second, and by 5 if the item is clicked over 1 second. The player will be
 able to follow the time difference between each clicked item which is updated at the bottom of the gameboard.<br>
-**Timer** - closing to end of game time the timer visually enhances this by changing color to yellow followed by red.<br>
-**Modal** - the modal will pop up when the game end and will show the player his or her total score. The player will at this time have two choices presented on two buttons: resume the game or go to the home page.
 
-### Features Left to Implement
+**Timer**
+<br>Closing to end of game time the timer visually enhances this by changing color to yellow followed by red.<br>
+
+**Modal**
+<br>The modal will pop up when the game end and will show the player his or her total score. The player will at this time have two choices presented on two buttons: resume the game or go to the home page.
+
+### Future Features
 - Levels of difficulty by offering three sets of timeframes (beginner, intermediate, and advanced).
 - Some target items of a certain color decrease the score when clicked. The player needs to be fast and attentive.
 - A scoreboard for players to register their score and compare it with others on the web page.

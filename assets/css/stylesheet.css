@@ -215,7 +215,7 @@ html, body {
     font-weight: 300;
     font-size: 32rem;
     color: #333;
-    margin-bottom: 40rem;
+    margin-bottom: 10rem;
 }
 
 .flex-container {
@@ -305,3 +305,9 @@ html, body {
     }
 }
 
+@media only screen and (min-height: 720px) {
+    .modal-content {
+        width: 60%;
+        height: 70%;
+        }
+}
