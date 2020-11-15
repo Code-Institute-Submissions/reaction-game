@@ -13,6 +13,7 @@
  const ALERT_THRESHOLD = 5;
 
  //Start button display and random delay before game start
+ //Initiating timer
 startGame.addEventListener("click", function() {
     startGame.style.display = "none";                   
     cubeImg.style.display = "none";
@@ -21,6 +22,7 @@ startGame.addEventListener("click", function() {
     pText.style.display = "none";
     let ranTime = Math.random() * 2000 + 1000;
     setTimeout(makeItem, ranTime);
+    startTimer();
 });
 
 //Create and styling target elements and randomly display on page in  random time intervals
@@ -46,7 +48,7 @@ div.addEventListener("click", function() {
     let diff = (endTime - div.startTime)/1000;
     scoreArea.innerHTML = "Clicked in "+diff+" seconds!";
 
-//Incrementing score
+//Incrementing score and display as total score
 currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
     if (diff < 1){
         currentScore += 10;
@@ -61,7 +63,7 @@ document.querySelector(".scoreText").innerHTML = currentScore;
     container.removeChild(div);  
 });
 
-//Time interval for show and hide elements
+//Time interval for show and target elements
 div.timer = setTimeout(function() {
     container.removeChild(div);
     makeItem();
@@ -72,16 +74,7 @@ container.appendChild(div);
 
 /*End Game - 'set the timeout globally and then clear the interval div.timer
  change to any global value and remove the interval'*/
-setTimeout;
 
-function endGame() {    
-  if (timeLeft === 0){
-     clearInterval(div.timer);
-  } 
-  else {      
-    makeItem;
-    }
-}
 
 //Credit: Mateusz Rybczonec, CSS-Trick for colored animation
 const COLOR_CODES = {
@@ -106,7 +99,7 @@ let timerInterval = null;
 let remainingPathColor = COLOR_CODES.info.color;
 app.style.display = "none";
 
-
+//Create timer
 document.getElementById("app").innerHTML = `
     <div class="base-timer">
         <svg class="base-timer__svg" viewbox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -128,13 +121,10 @@ document.getElementById("app").innerHTML = `
     </div>
 `;
 
-
-startTimer();
-
 function onTimesUp() {
-  clearInterval(timerInterval);
-  modal.classList.toggle("show-modal");
-  document.querySelector(".userScore").innerHTML = ("Total score: ") + currentScore;
+    clearInterval(timerInterval);
+    modal.classList.toggle("show-modal");
+    document.querySelector(".userScore").innerHTML = ("Total score: ") + currentScore;
 }
 
 function startTimer() {
@@ -161,7 +151,7 @@ function formatTime(time) {
     return `${minutes}:${seconds}`;
 }
 
-//Animation
+//Timer animation
 function setRemainingPathColor(timeLeft) {
     const { alert, warning, info } = COLOR_CODES;
     if (timeLeft <= alert.threshold) {
@@ -197,7 +187,6 @@ function setCircleDasharray() {
 
 // Credit: Sabe.io Modal Pop Up
 const modal = document.querySelector(".modal");
-const trigger = document.querySelector(".trigger");
 const closeButton = document.querySelector(".closeButton");
 
 function toggleModal () {
