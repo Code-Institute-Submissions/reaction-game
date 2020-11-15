@@ -144,7 +144,7 @@ option. You need to have downloaded and installed Git on to your computer. Make 
 
 - Create a folder for storing the repository locally
 - Open your web browser and enter the GitHub repository’s URL.
-- Click on the green button, “Clone or Download”, on right side of the screen, below the “Contributors” tab<br>
+- Click on the button, “Code”, on right side of the screen, next to the green button, below the “Security” tab<br>
 
 ![To clone repo with HTTP](assets/images/clone_http.png)
 
