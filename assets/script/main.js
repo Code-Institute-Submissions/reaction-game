@@ -55,9 +55,11 @@ div.addEventListener("click", function() {
 currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
     if (diff < 1){
         currentScore += 10;
-    } else {
+    } else if (diff > 1){
         currentScore += 5;
-    } 
+    } else {
+        currentScore += 0;
+    }
 document.querySelector(".scoreText").innerHTML = currentScore;
 
 
@@ -90,6 +92,16 @@ function endGame() {
     modal.classList.toggle("show-modal");
     document.querySelector(".userScore").innerHTML = ("Total score: ") + currentScore;
 }
+
+ function restartGame() {
+    restartGameBtn.addEventListener("click", toggleModal);
+    location.reload();
+    resetScoreBoard();
+ }
+
+ function resetScoreBoard() {
+     scoreText = 0;
+ }
 
 //Credit: Mateusz Rybczonec, CSS-Trick for colored animation
 const COLOR_CODES = {

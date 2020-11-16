@@ -120,6 +120,11 @@ If this section grows too long, you may want to split it off into a separate fil
 - [GTmetrix](https://gtmetrix.com/) To test speed and loading time
 - [WebAim](https://webaim.org/resources/contrastchecker/) Contrast checker
 
+### Known bugs
+- On some screen sizes the gameboard is overflowing, placing the target items halfway off the screen. This is due to incorrect sized 
+container and 'get bounding client rectangle'.
+- If a player never receives a score the console logs error "currentScore is not defined".
+
 ---
 ## Deployment
 
@@ -138,13 +143,13 @@ Following steps will be taken to fork the repository, to update or make changes 
 
 Git Clone
 
-The "clone" command downloads an existing Git repository to a local computer. This enables us to have a local version of that remote repository in a case to make any changes to a particular project or to work more freely.<br>
+The "clone" command downloads an existing Git repository to a local computer.
 There are different options for cloning a repository, but this walkthrough will only cover the Url option, which is the most frequently used
 option. You need to have downloaded and installed Git on to your computer. Make sure to allow Git to be used from the command line in the installation process.
 
-- Create a folder for storing the repository locally
+- Create a folder for storing the repository locally.
 - Open your web browser and enter the GitHub repository’s URL.
-- Click on the button, “Code”, on right side of the screen, next to the green button, below the “Security” tab<br>
+- Click on the button, “Code”, on right side of the screen, below the “Security” tab<br>
 
 ![To clone repo with HTTP](assets/images/clone_http.png)
 
