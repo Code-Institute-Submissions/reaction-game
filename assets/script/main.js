@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
 //Code: credit to Laurence Svekis, Udemy Course Javascript Fundamentals
 //Declared Variables
  const container = document.querySelector(".container");
@@ -7,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
  const scoreArea = document.querySelector(".score");
  const heading = document.querySelector(".heading");
  const pText = document.querySelector(".pText");
- const userScore = document.querySelector(".userScore");
  const scoreText = document.querySelector(".scoreText");
  scoreText.style.display = "none";
+
  let divtimer;
  let currentDiv;
  const FULL_DASH_ARRAY = 283;
@@ -70,8 +71,6 @@ currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
         currentScore += 0;
     }
 document.querySelector(".scoreText").innerHTML = currentScore;
-    /*clearTimeout(div.timer);
-    makeItem();*/
     container.removeChild(div); 
 });
 
@@ -83,10 +82,13 @@ currentDiv = div;
 function blockTimer() {
 divtimer = setInterval(
     makeItem
-, 1400);
+, 1200);
 }
 
-//When game time runs out
+/*
+When game time runs out clear timer interval,
+end game and show pop up box with total score
+*/
  function onTimesUp() {
     clearInterval(timerInterval);
     clearInterval(divtimer);
@@ -94,28 +96,10 @@ divtimer = setInterval(
     document.querySelector(".userScore").innerHTML = ("Total score: ") + currentScore;
 }
 
+//Resume game by refreshing landing page
  function restartGame() {
-    resetScoreBoard();
     location.reload();    
  }
-
- function resetScoreBoard() {
-    scoreText = 0;
- }
-
- function startTimer() {
-    timerInterval = setInterval(() => {
-        timePassed = timePassed += 1;
-        timeLeft = TIME_LIMIT - timePassed;
-    document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
-    setCircleDasharray();
-    setRemainingPathColor(timeLeft);
-
-    if (timeLeft === 0) {
-      onTimesUp();
-    }
-}, 1000);
-}
 
 //Credit: Mateusz Rybczonec, CSS-Trick for colored animation
 const COLOR_CODES = {
@@ -162,6 +146,20 @@ document.getElementById("app").innerHTML = `
         </span>
     </div>
 `;
+
+ function startTimer() {
+    timerInterval = setInterval(() => {
+        timePassed = timePassed += 1;
+        timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+}, 1000);
+}
 
 //Timer text display
 function formatTime(time) {

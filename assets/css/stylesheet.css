@@ -29,7 +29,6 @@ html, body {
     height: 100%;
     text-align: center;
     margin: auto;
-   
 }
 
 .container h1 {
@@ -282,6 +281,12 @@ html, body {
     }
 }
 
+@media only screen and (min-width: 500px) {
+    .pText {
+        font-size: 24rem;
+    }
+}
+
 @media only screen and (max-width: 500px) {
     .modal-content {
         width: 85%;
@@ -293,6 +298,9 @@ html, body {
     .container h1 {
          font-size: 58rem;
     }
+    .pText {
+        font-size: 30rem;
+    }
 }
 
 @media only screen and (min-width: 900px) {
@@ -302,6 +310,9 @@ html, body {
      .modal-content h1 {
         font-size: 56rem;
         margin-top: 10%;
+    }
+    .pText {
+        font-size: 36rem;
     }
 }
 

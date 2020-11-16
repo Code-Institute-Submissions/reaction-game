@@ -121,6 +121,7 @@ If this section grows too long, you may want to split it off into a separate fil
 - [WebAim](https://webaim.org/resources/contrastchecker/) Contrast checker
 
 ### Known bugs
+- Image on landing page is on some screen sizes causing an overflow.
 - On some screen sizes the gameboard is overflowing, placing the target items halfway off the screen. This is due to incorrect sized 
 container and 'get bounding client rectangle'.
 - If a player never receives a score the console logs error "currentScore is not defined".
