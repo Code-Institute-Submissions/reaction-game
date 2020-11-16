@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', () => {
 //Code: credit to Laurence Svekis, Udemy Course Javascript Fundamentals
 //Declared Variables
  const container = document.querySelector(".container");
@@ -9,7 +10,8 @@
  const userScore = document.querySelector(".userScore");
  const scoreText = document.querySelector(".scoreText");
  scoreText.style.display = "none";
-
+ let divtimer;
+ let currentDiv;
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
  const ALERT_THRESHOLD = 5;
@@ -26,10 +28,17 @@ startGame.addEventListener("click", function() {
     let ranTime = Math.random() * 2000 + 1000;
     setTimeout(makeItem, ranTime);
     startTimer();
+    blockTimer();
 });
 
 //Create and styling target elements and randomly display on page in  random time intervals
 function makeItem() {
+   try {
+  container.removeChild(currentDiv);
+}
+catch(err) {
+  console.log('no div');
+}
     let boundary = container.getBoundingClientRect();
     console.log(boundary);
 
@@ -61,47 +70,52 @@ currentScore = parseInt(document.querySelector(".scoreText").innerHTML);
         currentScore += 0;
     }
 document.querySelector(".scoreText").innerHTML = currentScore;
-
-
-    clearTimeout(div.timer);
-    makeItem();
-    container.removeChild(div);  
+    /*clearTimeout(div.timer);
+    makeItem();*/
+    container.removeChild(div); 
 });
 
-//Time interval to show and target elements
-div.timer = setTimeout(function() {
-    container.removeChild(div);
-    makeItem();
-}, 1400);
-
 container.appendChild(div);
+currentDiv = div;
 }
 
-/*End Game - 'set the timeout globally and then clear the interval div.timer
- change to any global value and remove the interval'*/
-setTimeout;
-
-function endGame() {
-    if(timeleft === 0)
-    clearInterval(div.timer);
+//Time interval to show and target elements
+function blockTimer() {
+divtimer = setInterval(
+    makeItem
+, 1400);
 }
 
 //When game time runs out
  function onTimesUp() {
     clearInterval(timerInterval);
+    clearInterval(divtimer);
     modal.classList.toggle("show-modal");
     document.querySelector(".userScore").innerHTML = ("Total score: ") + currentScore;
 }
 
  function restartGame() {
-    restartGameBtn.addEventListener("click", toggleModal);
-    location.reload();
     resetScoreBoard();
+    location.reload();    
  }
 
  function resetScoreBoard() {
-     scoreText = 0;
+    scoreText = 0;
  }
+
+ function startTimer() {
+    timerInterval = setInterval(() => {
+        timePassed = timePassed += 1;
+        timeLeft = TIME_LIMIT - timePassed;
+    document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
+    setCircleDasharray();
+    setRemainingPathColor(timeLeft);
+
+    if (timeLeft === 0) {
+      onTimesUp();
+    }
+}, 1000);
+}
 
 //Credit: Mateusz Rybczonec, CSS-Trick for colored animation
 const COLOR_CODES = {
@@ -148,20 +162,6 @@ document.getElementById("app").innerHTML = `
         </span>
     </div>
 `;
-
-function startTimer() {
-    timerInterval = setInterval(() => {
-        timePassed = timePassed += 1;
-        timeLeft = TIME_LIMIT - timePassed;
-    document.getElementById("base-timer-label").innerHTML = formatTime(timeLeft);
-    setCircleDasharray();
-    setRemainingPathColor(timeLeft);
-
-    if (timeLeft === 0) {
-      onTimesUp();
-    }
-}, 1000);
-}
 
 //Timer text display
 function formatTime(time) {
@@ -219,6 +219,6 @@ function toggleModal () {
 
 //Hide modal
 closeButton.addEventListener("click", toggleModal);
-restartGameBtn.addEventListener("click", toggleModal);
-   
+restartGameBtn.addEventListener("click", restartGame, toggleModal);
 
+});
