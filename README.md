@@ -80,6 +80,7 @@ able to follow the time difference between each clicked item which is updated at
 - Some target items of a certain color decrease the score when clicked. The player needs to be fast and attentive.
 - A scoreboard for players to register their score and compare it with others on the web page.
 - Links to social media to share your score with family and friends.
+- Smoother movements of target items across gameboard.
 
 ---
 ## Technologies Used
@@ -92,7 +93,7 @@ able to follow the time difference between each clicked item which is updated at
 - [Basic Syntax Markdown Guide](https://www.markdownguide.org/basic-syntax/#unordered-lists)
 - [Google Fonts](https://fonts.google.com/)
 - [Adobe Color](https://color.adobe.com/sv/create/color-wheel)
-- Grammarly Text editor
+- [Grammarly](https://www.grammarly.com/) Text editor
 - [Balsamiq Wireframes](https://balsamiq.com/)
 - [Tiny.png](https://tinypng.com/)
 - [Pixabay](https://pixabay.com/)
@@ -123,7 +124,7 @@ If this section grows too long, you may want to split it off into a separate fil
 ### Known bugs
 - Image on landing page is on some screen sizes causing an overflow.
 - On some screen sizes the gameboard is overflowing, placing the target items halfway off the screen. This is due to incorrect sized 
-container and 'get bounding client rectangle'.
+container and 'getBoundingClientRectangle'.
 - If a player never receives a score the console logs error "currentScore is not defined".
 
 ---

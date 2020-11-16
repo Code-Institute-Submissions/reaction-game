@@ -82,7 +82,7 @@ currentDiv = div;
 function blockTimer() {
 divtimer = setInterval(
     makeItem
-, 1200);
+, 1000);
 }
 
 /*
@@ -118,7 +118,7 @@ const COLOR_CODES = {
 
 //Credit: Css-Tricks Animated Countdown Timer
 //Declared variables
-const TIME_LIMIT = 20;
+const TIME_LIMIT = 60;
 let timePassed = 0;
 let timeLeft = TIME_LIMIT;
 let timerInterval = null;
