@@ -133,8 +133,11 @@ the home page is refreshed with no delay.
 ### Validators used
 
 - Lighthouse Test Response<br>
+I access Lighthouse by ```shift + cmd + i``` (Mac) or either ```F12``` or ```ctrl + shift + i``` (windows) alternatively 
+by right-clicking on the web page to open up Chrome dev tools. I access Lighthouse in the top menu dropdown list and
+select generate report.
 
-![LighthouseTest Response](assets/images/small-lighthouse.png)<br>
+![Lighthouse Test Response](assets/images/small-lighthouse.png)<br>
 [Full image can bee seen here](assets/images/large-lighthouse.png)
 
 Issues solved<br>
@@ -191,7 +194,7 @@ in the installation process.
 
 - Create a folder for storing the repository locally.
 - Open your web browser and enter the GitHub repository’s URL.
-- Click on the button, “Code”, on right side of the screen, below the “Security” tab<br>
+- Click on the button, “Code”, on the right side of the screen, below the “Security” tab<br>
 
 ![To clone repo with HTTP](assets/images/clone_http.png)
 
