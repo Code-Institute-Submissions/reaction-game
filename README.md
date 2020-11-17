@@ -101,18 +101,29 @@ able to follow the time difference between each clicked item which is updated at
 
 ---
 ## Testing
-In this section, you need to convince the assessor that you have conducted enough testing to legitimately believe that the site works well. Essentially, in this part you will want to go over all of your user stories from the UX section and ensure that they all work as intended, with the project providing an easy and straightforward way for the users to achieve their goals.
+### Manual Testing
+Manual testing in Google Chrome, Mozilla Firefox and Edge on a MacBook Pro 13".<br></br>
+**Features**
 
-Whenever it is feasible, prefer to automate your tests, and if you've done so, provide a brief explanation of your approach, link to the test file(s) and explain how to run them.
+- Start button tested in various screen sizes and browsers. The start button responds to satisfaction and hover effect
+is clearly visible.
+- Timer is tested in various screen sizes and browsers. It starts and measure correct time (60 seconds), display given intervals 
+of 10 seconds left in yellow colour and 5 seconds left in red correctly. The timer also start and display correctly after restart of game.
+- Userscore display when game starts and correctly increment the score of 10 and 5 points depending how fast the player click on target items.
+Userscore also display correctly after restart of game. Userscore is correctly displayed in modal after game end with correct total score.
+- Reactivity score is displayed after two target items have been clicked and continue to measure time elapsed between clicked items during game.
+- Target items is displayed when game starts and are shown in random interval, in random positions and in random sizes. The interval is stopped 
+when timer end still displaying one target item. Some target items is causing an overflow in some screen sizes which makes the page jump. This
+is due to Domrect incorrect sizing of viewport and is **not** to satisfaction.
+- Modal is displayed at end of game, centered in page. Total score is displayed correctly. 0 score is not displayed. Restart game button
+is functional and tested in various screen sizes and browser. The button with its hover effect is displayed to satisfaction. When restart button is clicked
+the home page is refreshed with no delay.
+- The project was deployed and shared at Code Institute peer-code-review with the only feedback of the target items causing overflow on page.
 
-For any scenarios that have not been automated, test the user stories manually and provide as much detail as is relevant. A particularly useful form for describing your testing process is via scenarios, such as:
+### Validators used
 
-In addition, you should mention in this section how your project looks and works on different browsers and screen sizes.
-
-You should also mention in this section any interesting bugs or problems you discovered during your testing, even if you haven't addressed them yet.
-
-If this section grows too long, you may want to split it off into a separate file and link to it from here.
 - [Techsini](http://techsini.com/) responsive test and mockup generator
+- [Troy](http://troy.labs.daum.net/) resonsive web page generator
 - [Autoprefixer](https://autoprefixer.github.io/)
 - [HTML Validator](https://validator.w3.org/)
 - [CSS Validator](https://jigsaw.w3.org/css-validator/)<br>
@@ -123,10 +134,11 @@ If this section grows too long, you may want to split it off into a separate fil
 - [WebAim](https://webaim.org/resources/contrastchecker/?fcolor=B9652D&bcolor=FDFCE7) Contrast checker
 
 ### Known bugs
-- Image on landing page is on some screen sizes causing an overflow.
-- On some screen sizes the gameboard is overflowing, placing the target items halfway off the screen. This is due to incorrect sized 
-container and 'getBoundingClientRectangle'.
-- If a player never receives a score the console logs error "currentScore is not defined".
+- Main image on landing page is on some screen sizes causing an overflow. When the game is in play the image is not showing an therefor do not
+have an effect on the game itself.
+- Target items is in some positions overflowing with causes the page to jump. This is due to incorrect sizing of viewport by Domrect and
+getBoundingClientRect in main.js. 
+
 
 ---
 ## Deployment
@@ -185,6 +197,7 @@ please visit this [Git Tutorial](https://www.atlassian.com/git/tutorials/setting
 - Code Institute Slack Channel<br>
 - [Atlassian Bitbucket](https://www.atlassian.com/git)
 <br>*General source of information
+- Antonio Rodriguez, my mentor, general support and assistance in finding solution to end game.
 
 
 ### Content

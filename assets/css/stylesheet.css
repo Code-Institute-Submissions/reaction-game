@@ -284,7 +284,7 @@ html, body {
 .restartGameBtn {
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: flex;
     background-color: #bd1fbf;
     text-decoration: none;
     width: 100%;
@@ -386,7 +386,7 @@ html, body {
 @media only screen and (min-height: 42.50em) {
     .modal-content {
         width: 60%;
-        height: 70%;
+        height: 65%;
         }
 }
 
