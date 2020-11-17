@@ -45,6 +45,7 @@ html, body {
     height: 100%;
     text-align: center;
     margin: auto;
+    overflow: hidden !important;
 }
 
 .container h1 {

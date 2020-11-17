@@ -128,6 +128,12 @@ the home page is refreshed with no delay.
 
 ### Validators used
 
+- Lighthouse Test Response<br>
+
+![LighthouseTest Response](assets/images/lighthouse-test.png)<br>
+
+Issues solved<br>
+
 - [Techsini](http://techsini.com/) responsive test and mockup generator
 - [Troy](http://troy.labs.daum.net/) responsive test
 - [Autoprefixer](https://autoprefixer.github.io/)
@@ -140,9 +146,13 @@ Two undefined variables  - app, currentScore<br>
 Multiple comment - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).<br>
 4 mentions - template literal syntax' is only available in ES6 (use 'esversion: 6').<br>
 12 mentions - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).<br>
+
+I pasted ```/*jshint esversion: 6*/``` at the top of the javascript file to show which version I am using.<br>
+
 - [Google Mobile Friendly](https://search.google.com/test/mobile-friendly?id=TjAExRUXFnhWfhViLsbwyw) test
 - [GTmetrix](https://gtmetrix.com/reports/8000-d49eb34e-4f68-4259-ab33-a1635c419110.ws-eu01.gitpod.io/GxTiMqyc) To test speed and loading time
 - [WebAim](https://webaim.org/resources/contrastchecker/?fcolor=B9652D&bcolor=FDFCE7) Contrast checker
+- [Pineberry](https://www.pineberry.com/analysverktyg/resultat/Vw8vYZpv4xY_/) online SEO tester
 
 ### Known bugs
 - Main image on landing page is on some screen sizes causing an overflow. When the game is in play the image is not showing an therefor do not
@@ -196,17 +206,18 @@ please visit this [Git Tutorial](https://www.atlassian.com/git/tutorials/setting
 ---
 ## Credits
 - [Udemy Javascript course](https://www.udemy.com/course/javascript-training/) by Laurence Svekis.
-<br>*Modified for suitability with other features such as score counter and timer.*
+<br>*Modified for suitability with other features such as score counter and timer*
 - [CSS-Tricks Animated Countdown Timer](https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/)
 - [SABE Modal Pop Up Box](https://sabe.io/tutorials/how-to-create-modal-popup-box)
 <br>*Modified to be activated by timer instead of button.*
 - Code Institute LMS
 <br>*General source of information*
 - Stack Overflow, W3School, Mozilla MDN
-<br>*General source of information*
+<br>*General source of information and troubleshooting*
 - Code Institute Slack Channel<br>
+Source of information and troubleshooting
 - [Atlassian Bitbucket](https://www.atlassian.com/git)
-<br>*General source of information
+<br>*General source of information*
 - Antonio Rodriguez, my mentor, general support and assistance in finding solution to end game.
 
 ### Content
