@@ -5,7 +5,7 @@ Catch Me If You Can is a game to test the player's reaction time.  In a playful 
 click on as many items possible before the set timeframe of the game ends. The target items will show themselves randomly 
 on the webpage, in position as well as within various time intervals. The score is based on the reaction time.
 
-Follow this link to play the [game](link)
+Follow this link to play the [game](https://helena-p.github.io/reaction-game)
 
 ---
 ## Table of Contents
