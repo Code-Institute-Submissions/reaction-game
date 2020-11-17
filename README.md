@@ -53,7 +53,7 @@ The bright colors with stark contrast are used to enhance the visual hierarchy a
 The web site is kept minimalistic in its features to mediate a modern, timeless feeling and not to be perceived as cluttered.
 
 
-[Wireframes](assets/resources/reaction-game_ms2.pdf)
+To view wireframes please click [here](assets/resources/reaction-game_ms2.pdf).
 
 ---
 ## Features
@@ -73,7 +73,9 @@ able to follow the time difference between each clicked item which is updated at
 <br>Closing to end of game time the timer visually enhances this by changing color to yellow followed by red.<br>
 
 **Modal**
-<br>A modal pop up when the game end and will show the player his or her total score. The player will at this time have two choices presented on two buttons: resume the game or go to the home page.
+<br>A modal pop up when the game end and will show the player his or her total score. The player is given the 
+option to resume the gameby clicking on the restart game button. The button have a hover effect to visually 
+strengthen the respond to the users activity.
 
 ### Future Features
 - Optimise user experience in older versions of Safari.
@@ -82,7 +84,6 @@ able to follow the time difference between each clicked item which is updated at
 - Some target items of a certain color decrease the score when clicked. The player needs to be fast and attentive.
 - A scoreboard for players to register their score and compare it with others on the web page.
 - Links to social media to share your score with family and friends.
-
 
 ---
 ## Technologies Used
@@ -104,12 +105,15 @@ able to follow the time difference between each clicked item which is updated at
 ---
 ## Testing
 ### Manual Testing
-Manual testing in Google Chrome, Safari, Mozilla Firefox and Edge on a MacBook Pro 13".<br>
+The manual testing have been performed in Google Chrome, Safari, Mozilla Firefox and Edge on a MacBook Pro 13". Testing for responsiveness has been made in
+ dev tools continously throughout the building process.<br>
 In older versions of Safari there is not an optimal user experience where the start button and pop-up
 modal is too big and border-radius is extensive.
 
-**Features**
+Manual testing made by family members on various devices and screen sizes. A problem with landing site on a Iphone 6s where the page was 
+overflowing in height and didn't scroll.
 
+**Features**
 - Start button tested in various screen sizes and browsers. The start button responds to satisfaction and hover effect
 is clearly visible.
 - Timer is tested in various screen sizes and browsers. It starts and measure correct time (60 seconds), display given intervals 
@@ -130,9 +134,11 @@ the home page is refreshed with no delay.
 
 - Lighthouse Test Response<br>
 
-![LighthouseTest Response](assets/images/lighthouse-test.png)<br>
+![LighthouseTest Response](assets/images/small-lighthouse.png)<br>
+[Full image can bee seen here](assets/images/large-lighthouse.png)
 
 Issues solved<br>
+Decompressing main image to 74 K and added meta descrition to HTML ```<head>``` tag.
 
 - [Techsini](http://techsini.com/) responsive test and mockup generator
 - [Troy](http://troy.labs.daum.net/) responsive test
@@ -155,7 +161,7 @@ I pasted ```/*jshint esversion: 6*/``` at the top of the javascript file to show
 - [Pineberry](https://www.pineberry.com/analysverktyg/resultat/Vw8vYZpv4xY_/) online SEO tester
 
 ### Known bugs
-- Main image on landing page is on some screen sizes causing an overflow. When the game is in play the image is not showing an therefor do not
+- Main image on landing page is on some screen sizes causing an overflow. When the game is in play the image is not showing and therefor do not
 have an effect on the game itself.
 - Target items is in some positions overflowing with causes the page to jump. This is due to incorrect sizing of viewport by Domrect and
 getBoundingClientRect in main.js. Ongoing process.
@@ -180,7 +186,8 @@ Git Clone
 
 The "clone" command downloads an existing Git repository to a local computer.
 There are different options for cloning a repository, but this walkthrough will only cover the Url option, which is the most frequently used
-option. You need to have downloaded and installed Git on to your computer. Make sure to allow Git to be used from the command line in the installation process.
+option. You need to have downloaded and installed Git on to your computer. Make sure to allow Git to be used from the command line 
+in the installation process.
 
 - Create a folder for storing the repository locally.
 - Open your web browser and enter the GitHub repository’s URL.
@@ -188,8 +195,8 @@ option. You need to have downloaded and installed Git on to your computer. Make 
 
 ![To clone repo with HTTP](assets/images/clone_http.png)
 
-- Open the Command Prompt (on Windows) or Terminal(on Mac).
-- In the terminal, navigate to the location in which you would like to store the repo by typing the following command:
+- Open the Command Prompt (on Windows) or Terminal (on Mac).
+- In the terminal, navigate to the location in which you would like to store the repository by typing the following command:
 
 ```$ cd <name of directory>``` 
 
@@ -206,7 +213,7 @@ please visit this [Git Tutorial](https://www.atlassian.com/git/tutorials/setting
 ---
 ## Credits
 - [Udemy Javascript course](https://www.udemy.com/course/javascript-training/) by Laurence Svekis.
-<br>*Modified for suitability with other features such as score counter and timer*
+<br>*Foundation for the game. Modified for suitability with other features such as end game, score counter and timer*
 - [CSS-Tricks Animated Countdown Timer](https://css-tricks.com/how-to-create-an-animated-countdown-timer-with-html-css-and-javascript/)
 - [SABE Modal Pop Up Box](https://sabe.io/tutorials/how-to-create-modal-popup-box)
 <br>*Modified to be activated by timer instead of button.*
@@ -217,7 +224,7 @@ please visit this [Git Tutorial](https://www.atlassian.com/git/tutorials/setting
 - Code Institute Slack Channel<br>
 Source of information and troubleshooting
 - [Atlassian Bitbucket](https://www.atlassian.com/git)
-<br>*General source of information*
+<br>*General source of information.*
 - Antonio Rodriguez, my mentor, general support and assistance in finding solution to end game.
 
 ### Content
