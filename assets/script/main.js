@@ -9,13 +9,14 @@ document.addEventListener('DOMContentLoaded', () => {
  const heading = document.querySelector(".heading");
  const pText = document.querySelector(".pText");
  const scoreText = document.querySelector(".scoreText");
- scoreText.style.display = "none";
-
+ 
  let divtimer;
  let currentDiv;
  const FULL_DASH_ARRAY = 283;
  const WARNING_THRESHOLD = 10;
  const ALERT_THRESHOLD = 5;
+
+ scoreText.style.display = "none";
 
  //Start button display and random delay before game start
  //Initiating timer
@@ -24,7 +25,7 @@ startGame.addEventListener("click", function() {
     cubeImg.style.display = "none";
     app.style.display = "block";
     scoreText.style.display = "block";
-    heading.style.display = "none"
+    heading.style.display = "none";
     pText.style.display = "none";
     let ranTime = Math.random() * 2000 + 1000;
     setTimeout(makeItem, ranTime);
@@ -82,7 +83,7 @@ currentDiv = div;
 function blockTimer() {
 divtimer = setInterval(
     makeItem
-, 1000);
+, 1200);
 }
 
 /*
@@ -220,3 +221,12 @@ closeButton.addEventListener("click", toggleModal);
 restartGameBtn.addEventListener("click", restartGame, toggleModal);
 
 });
+
+/* 
+Actually one thing you could consider....
+Use JS to calculate the width of the viewport, 
+and then when assigning the location of the box, 
+then use that width and subtract a certain value 
+(the box size itself, plus maybe a few extra px so 
+it doesn't does the right-wall)
+*/

@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Galindo&family=Prompt:wght@200;300;400;500&display=swap');
 
 * {
@@ -10,21 +17,28 @@
 }
 
 html, body {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     background-color: #fdfce7;
     font-size: 16rem;
     height: 100%;
 }
 
 *, *::before, *::after {
-    box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+            box-sizing: inherit;
 }
 
 /* -------- Gameboard -------- */
 
 .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -34,21 +48,24 @@ html, body {
 .container h1 {
     font-family: 'Galindo', 'Prompt', sans-serif;
     text-shadow: 8px 5px 10px rgba(51, 51, 51, 0.3);
-    font-weight: 300;
     font-size: 46rem;
     color: #f28705;
     text-transform: capitalize;
     text-align: center;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 4%;
 }
 
 .pText {
     font-family: 'Prompt', sans-serif;
     font-size: 36rem;
-    font-weight: 300;
-    color: #f28705;
-    justify-content: center;
+    font-weight: 400;
+    color: #b9652d;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 18rem;
     text-align: justify;
     padding-left: 10%;
@@ -69,9 +86,14 @@ html, body {
 }
 
 .btn:hover {
-    box-shadow: 15px 10px 12px rgba(51, 51, 51, 0.5);
+    -webkit-box-shadow: 15px 10px 12px rgba(51, 51, 51, 0.5);
+            box-shadow: 15px 10px 12px rgba(51, 51, 51, 0.5);
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
     transition: all 0.8s;
-    transform : scaleX(1.2);
+    -webkit-transform : scaleX(1.2);
+        -ms-transform : scaleX(1.2);
+            transform : scaleX(1.2);
 }
 
 .score, .scoreText {
@@ -82,21 +104,28 @@ html, body {
     padding: 5rem;
     width: 40%;
     margin: auto;
-    align-self: flex-start;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
 }
 
 .cubeImg {
     width: 100%;
     height: auto;
-    position: center;
-    align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 /* -------- Animated Timer -------- */
 /* -------- Credit: Mateusz Rybczonec & CSS-Tricks -------- */
 
 #app {
-    align-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-top: 6%;
 }
 
@@ -121,9 +150,15 @@ html, body {
   width: 160px;
   height: 160px;
   top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 44rem;
 }
 
@@ -132,14 +167,22 @@ html, body {
 .base-timer__path-remaining {
     stroke-width: 7px;
     stroke-linecap: round;
-    transform: rotate(90deg);
-    transform-origin: center;
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    -webkit-transition: 1s linear all;
+    -o-transition: 1s linear all;
     transition: 1s linear all;
     stroke: currentColor;
 }
 
 .base-timer__svg {
-    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+        -ms-transform: scaleX(-1);
+            transform: scaleX(-1);
 }
 
 .base-timer__path-remaining.green {
@@ -165,15 +208,18 @@ html, body {
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
     visibility: hidden;
-    transform: scale(1.1);
-    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+    -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+            transform: scale(1.1);
 }
 
 .modal-content {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     background-color: #fcfbee;
     padding: 10rem 10rem;
     width: 70%;
@@ -184,8 +230,9 @@ html, body {
 .show-modal {
     opacity: 1;
     visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+            transform: scale(1.0);
 }
 
 .modal-content h1 {
@@ -205,6 +252,8 @@ html, body {
 
 .closeButton:hover {
     font-size: 40rem;
+    -webkit-transition: all 0.8s;
+    -o-transition: all 0.8s;
     transition: all 0.8s;
 }
 
@@ -218,13 +267,23 @@ html, body {
 }
 
 .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .restartGameBtn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
     background-color: #bd1fbf;
     text-decoration: none;
@@ -236,9 +295,14 @@ html, body {
 }
 
 .restartGameBtn:hover {
-    box-shadow: 15px 10px 12px rgba(51, 51, 51, 0.5);;
+    -webkit-box-shadow: 15px 10px 12px rgba(51, 51, 51, 0.5);
+            box-shadow: 15px 10px 12px rgba(51, 51, 51, 0.5);;
+    -webkit-transition: all 0.8s;;
+    -o-transition: all 0.8s;;
     transition: all 0.8s;
-    transform : scaleX(1.2);
+    -webkit-transform : scaleX(1.2);
+        -ms-transform : scaleX(1.2);
+            transform : scaleX(1.2);
     border: none;
 }
 
@@ -274,36 +338,39 @@ html, body {
         height: 65%;
     }
     .modal-content h1 {
-        font-size: 32;
+        font-size: 32rem;
     }
     .modal-content p {
-        font-size: 24;
+        font-size: 24rem;
     }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 31.25em) {
     .pText {
         font-size: 24rem;
     }
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 31.25em) {
     .modal-content {
         width: 85%;
         height: 50%;
     }
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 43.75em) {
     .container h1 {
          font-size: 58rem;
     }
     .pText {
         font-size: 30rem;
     }
+    .modal-content p {
+        font-size: 28rem;
+    }
 }
 
-@media only screen and (min-width: 900px) {
+@media only screen and (min-width: 56.25em) {
     .container h1 {
          font-size: 68rem;
     }
@@ -316,16 +383,24 @@ html, body {
     }
 }
 
-@media only screen and (min-height: 720px) {
+@media only screen and (min-height: 42.50em) {
+    .modal-content {
+        width: 60%;
+        height: 70%;
+        }
+}
+
+@media only screen and (min-height: 45em) {
     .modal-content {
         width: 60%;
         height: 60%;
         }
 }
 
-@media only screen and (min-height: 1000px) {
+@media only screen and (min-height: 62.5em) {
     .modal-content {
         width: 60%;
         height: 40%;
         }
 }
+

@@ -115,11 +115,12 @@ If this section grows too long, you may want to split it off into a separate fil
 - [Techsini](http://techsini.com/) responsive test and mockup generator
 - [Autoprefixer](https://autoprefixer.github.io/)
 - [HTML Validator](https://validator.w3.org/)
-- [CSS Validator](https://jigsaw.w3.org/css-validator/)
+- [CSS Validator](https://jigsaw.w3.org/css-validator/)<br>
+![css image](assets/images/vcss.gif) ![css image blue](assets/images/vcss-blue.gif)<br>
 - [JsHint](https://jshint.com/)
-- [Google Mobile Friendly](https://search.google.com/test/mobile-friendly) test
-- [GTmetrix](https://gtmetrix.com/) To test speed and loading time
-- [WebAim](https://webaim.org/resources/contrastchecker/) Contrast checker
+- [Google Mobile Friendly](https://search.google.com/test/mobile-friendly?id=TjAExRUXFnhWfhViLsbwyw) test
+- [GTmetrix](https://gtmetrix.com/reports/8000-d49eb34e-4f68-4259-ab33-a1635c419110.ws-eu01.gitpod.io/GxTiMqyc) To test speed and loading time
+- [WebAim](https://webaim.org/resources/contrastchecker/?fcolor=B9652D&bcolor=FDFCE7) Contrast checker
 
 ### Known bugs
 - Image on landing page is on some screen sizes causing an overflow.
