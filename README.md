@@ -76,11 +76,13 @@ able to follow the time difference between each clicked item which is updated at
 <br>A modal pop up when the game end and will show the player his or her total score. The player will at this time have two choices presented on two buttons: resume the game or go to the home page.
 
 ### Future Features
+- Optimise user experience in older versions of Safari.
+- Debugg target items overflowing game-board at certain instances.
 - Levels of difficulty by offering three sets of timeframes (beginner, intermediate, and advanced).
 - Some target items of a certain color decrease the score when clicked. The player needs to be fast and attentive.
 - A scoreboard for players to register their score and compare it with others on the web page.
 - Links to social media to share your score with family and friends.
-- Smoother movements of target items across gameboard.
+
 
 ---
 ## Technologies Used
@@ -102,7 +104,10 @@ able to follow the time difference between each clicked item which is updated at
 ---
 ## Testing
 ### Manual Testing
-Manual testing in Google Chrome, Mozilla Firefox and Edge on a MacBook Pro 13".<br></br>
+Manual testing in Google Chrome, Safari, Mozilla Firefox and Edge on a MacBook Pro 13".<br>
+In older versions of Safari there is not an optimal user experience where the start button and pop-up
+modal is too big and border-radius is extensive.
+
 **Features**
 
 - Start button tested in various screen sizes and browsers. The start button responds to satisfaction and hover effect
@@ -119,16 +124,22 @@ is due to Domrect incorrect sizing of viewport and is **not** to satisfaction.
 is functional and tested in various screen sizes and browser. The button with its hover effect is displayed to satisfaction. When restart button is clicked
 the home page is refreshed with no delay.
 - The project was deployed and shared at Code Institute peer-code-review with the only feedback of the target items causing overflow on page.
+- Testing all links in documentation is correct with no errors.
 
 ### Validators used
 
 - [Techsini](http://techsini.com/) responsive test and mockup generator
-- [Troy](http://troy.labs.daum.net/) resonsive web page generator
+- [Troy](http://troy.labs.daum.net/) responsive test
 - [Autoprefixer](https://autoprefixer.github.io/)
 - [HTML Validator](https://validator.w3.org/)
 - [CSS Validator](https://jigsaw.w3.org/css-validator/)<br>
 ![css image](assets/images/vcss.gif) ![css image blue](assets/images/vcss-blue.gif)<br>
-- [JsHint](https://jshint.com/)
+- [JsHint](https://jshint.com/)<br>
+Returned errors<br>
+Two undefined variables  - app, currentScore<br>
+Multiple comment - 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).<br>
+4 mentions - template literal syntax' is only available in ES6 (use 'esversion: 6').<br>
+12 mentions - 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).<br>
 - [Google Mobile Friendly](https://search.google.com/test/mobile-friendly?id=TjAExRUXFnhWfhViLsbwyw) test
 - [GTmetrix](https://gtmetrix.com/reports/8000-d49eb34e-4f68-4259-ab33-a1635c419110.ws-eu01.gitpod.io/GxTiMqyc) To test speed and loading time
 - [WebAim](https://webaim.org/resources/contrastchecker/?fcolor=B9652D&bcolor=FDFCE7) Contrast checker
@@ -137,8 +148,7 @@ the home page is refreshed with no delay.
 - Main image on landing page is on some screen sizes causing an overflow. When the game is in play the image is not showing an therefor do not
 have an effect on the game itself.
 - Target items is in some positions overflowing with causes the page to jump. This is due to incorrect sizing of viewport by Domrect and
-getBoundingClientRect in main.js. 
-
+getBoundingClientRect in main.js. Ongoing process.
 
 ---
 ## Deployment
@@ -198,7 +208,6 @@ please visit this [Git Tutorial](https://www.atlassian.com/git/tutorials/setting
 - [Atlassian Bitbucket](https://www.atlassian.com/git)
 <br>*General source of information
 - Antonio Rodriguez, my mentor, general support and assistance in finding solution to end game.
-
 
 ### Content
 The textual content is written by myself, Helena Plantin.
