@@ -1,9 +1,8 @@
 ![Image of four different screensizes](assets/images/mockup.png)
 
 # Catch Me If You Can
-Catch Me If You Can is a game to test the player's reaction time.  In a playful setting, the goal is for the player to 
-click on as many items possible before the set timeframe of the game ends. The target items will show themselves randomly 
-on the webpage, in position as well as within various time intervals. The score is based on the reaction time.
+Catch Me If You Can is a game to test the player's reaction time. In a playful setting, the goal is for the player to click on as many items as possible before the set timeframe of the game ends. 
+The target items will show themselves randomly on the webpage, in position as well as within various time intervals. The score is based on the reaction time.
 
 Follow this link to play the [game](https://helena-p.github.io/reaction-game)
 
@@ -23,14 +22,13 @@ Follow this link to play the [game](https://helena-p.github.io/reaction-game)
 I aim to present a game that is easy to understand and play for all ages. The game is presented on a mobile-friendly and 
 easy to navigate web site. Accessible on all platforms to play the game on the go, or in the comforts of their home.
 
-On entering the website the player shall directly understand how to play the game and the positive expected outcome by a 
-welcoming text centered on the page. The headline is stating the purpose of the game and the centered start button, visually enforced by a stark 
- contrasting color, show how to engage with the game.
+On entering the website the player shall directly understand how to play the game and the positive expected outcome by a welcoming text centered on the page. 
+The headline is stating the purpose of the game and the centered start button, visually enforced by a stark contrasting color, shows how to engage with the game.
 
  While playing, the player can see the score increase as well as the reaction time between each "clicked" target. 
  My intention is that the player is given instant feedback on their performance to motivate interaction with the game.
 
- The game ends after 60 seconds and a pop-up box display the final score with the option to resume the game.
+ The game ends after 60 seconds and a pop-up box displays the final score with the option to resume the game.
 
 ***Player 1***
  > *I am a new player and I want to spend some short offtime while playing a fun game to test my performance in some way. 
@@ -73,9 +71,8 @@ able to follow the time difference between each clicked item which is updated at
 <br>Closing to end of game time the timer visually enhances this by changing color to yellow followed by red.<br>
 
 **Modal**
-<br>A modal pop up when the game end and will show the player his or her total score. The player is given the 
-option to resume the gameby clicking on the restart game button. The button have a hover effect to visually 
-strengthen the respond to the users activity.
+<br>A modal pop-up when the game end and will show the player his or her total score. The player is given the option 
+to resume the game by clicking on the restart game button. The button has a hover effect to visually strengthen the response to the user's activity.
 
 ### Future Features
 - Optimise user experience in older versions of Safari.
@@ -105,29 +102,27 @@ strengthen the respond to the users activity.
 ---
 ## Testing
 ### Manual Testing
-The manual testing have been performed in Google Chrome, Safari, Mozilla Firefox and Edge on a MacBook Pro 13". Testing for responsiveness has been made in
- dev tools continously throughout the building process.<br>
-In older versions of Safari there is not an optimal user experience where the start button and pop-up
-modal is too big and border-radius is extensive.
+The manual testing has been performed in Google Chrome, Safari, Mozilla Firefox, and Edge on a MacBook Pro 13". 
+Testing for responsiveness has been made in dev tools continuously throughout the building process.
+In older versions of Safari, there is not an optimal user experience where the start button and pop-up modal are too big and the border-radius is extensive.<br>
 
 Manual testing made by family members on various devices and screen sizes. A problem with landing site on a Iphone 6s where the page was 
 overflowing in height and didn't scroll.
 
 **Features**
-- Start button tested in various screen sizes and browsers. The start button responds to satisfaction and hover effect
-is clearly visible.
-- Timer is tested in various screen sizes and browsers. It starts and measure correct time (60 seconds), display given intervals 
-of 10 seconds left in yellow colour and 5 seconds left in red correctly. The timer also start and display correctly after restart of game.
-- Userscore display when game starts and correctly increment the score of 10 and 5 points depending how fast the player click on target items.
-Userscore also display correctly after restart of game. Userscore is correctly displayed in modal after game end with correct total score.
-- Reactivity score is displayed after two target items have been clicked and continue to measure time elapsed between clicked items during game.
-- Target items is displayed when game starts and are shown in random interval, in random positions and in random sizes. The interval is stopped 
-when timer end still displaying one target item. Some target items is causing an overflow in some screen sizes which makes the page jump. This
-is due to Domrect incorrect sizing of viewport and is **not** to satisfaction.
-- Modal is displayed at end of game, centered in page. Total score is displayed correctly. 0 score is not displayed. Restart game button
-is functional and tested in various screen sizes and browser. The button with its hover effect is displayed to satisfaction. When restart button is clicked
+- Start button tested in various screen sizes and browsers. The start button responds to satisfaction and hovers effect is clearly visible.
+- The timer is tested in various screen sizes and browsers. It starts and measures the correct time (60 seconds), displays gave intervals of 
+10 seconds left in yellow color and 5 seconds left in red correctly. The timer also starts and displays correctly after the restart of the game.
+- Userscore display when the game starts and correctly increment the score of 10 and 5 points depending on how fast the player clicks on target items. 
+Userscore also displays correctly after the restart of the game. Userscore is correctly displayed in modal after game end with the correct total score.
+- Reactivity score is displayed after two target items have been clicked and continue to measure the time elapsed between clicked items during the game.
+- Target items are displayed when the game starts and are shown in random intervals, in random positions, and in random sizes. The interval is stopped when the 
+timer end still displaying one target item. Some target items are causing an overflow in some screen sizes which makes the page jump. This is due to Domrect 
+incorrect sizing of the viewport and is **not** to satisfaction.
+- Modal is displayed at end of the game, centered on the page. The total score is displayed correctly. 0 score is not displayed. Restart game button is 
+functional and tested in various screen sizes and browsers. The button with its hover effect is displayed to satisfaction. When the restart button is clicked 
 the home page is refreshed with no delay.
-- The project was deployed and shared at Code Institute peer-code-review with the only feedback of the target items causing overflow on page.
+- The project was deployed and shared at Code Institute peer-code-review with the only feedback of the target items causing overflow on-page.
 - Testing all links in documentation is correct with no errors.
 
 ### Validators used
@@ -164,17 +159,17 @@ I pasted ```/*jshint esversion: 6*/``` at the top of the javascript file to show
 - [Pineberry](https://www.pineberry.com/analysverktyg/resultat/Vw8vYZpv4xY_/) online SEO tester
 
 ### Known bugs
-- Main image on landing page is on some screen sizes causing an overflow. When the game is in play 
-the image is hidden and therefor do not have an effect on the game itself. A smaller size of image will come out stretched and 
-up-pixelated instead. A better choice would then be to change to another image with different motif.
-- Target items is in some positions overflowing which causes the page to jump. This is due to incorrect sizing of viewport by DomRect and
-getBoundingClientRect in main.js. Improved performance by deleting 'wildcard' (margin and padding set to 0) in stylesheet css. Although 
-bug still remains.
-- Older versions of Safari have a bug when scaling with percentages and rem units in desktop view. Cause of action would be to change 
-units to px. Added Media Query to override certain webkits for Safari, IE and Edge.
-- Older versions of Safari have problems with displaying the main png image. Cause of action would be to use image of less size
- and/or in another format than png. This, on the other hand, give the result of image becomming stretched and up-pixelated on **all** browsers. A last resort 
- would be to change the main image completely to accomodate all browsers in all versions.
+- The main image on the landing page is on some screen sizes causing an overflow. When the game is in play the image is hidden and therefore 
+does not have an effect on the game itself. A smaller size of the image will come out stretched and up-pixelated instead. A better choice would 
+then be to change to another image with a different motif.
+- Target items are in some positions overflowing which causes the page to jump. This is due to incorrect sizing of the viewport by DomRect 
+and getBoundingClientRect in main.js. Improved performance by deleting 'wildcard' (margin and padding set to 0) in stylesheet.css. Although bug still remains.
+- Older versions of Safari have a bug when scaling with percentages and rem units in desktop view. The cause of action would be to change units to px. 
+Added Media Query to override certain web-kits for Safari, IE, and Edge.
+- Older versions of Safari have problems with displaying the main png image. The cause of action would be to use image of less size and/or in another format 
+than png. This, on the other hand, gives the result of the image becoming stretched and up-pixelated on all browsers. The last resort would be to change the main 
+image completely to accommodate all browsers in all versions.
+
 ---
 ## Deployment
 
