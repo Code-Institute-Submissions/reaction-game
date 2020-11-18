@@ -165,14 +165,16 @@ I pasted ```/*jshint esversion: 6*/``` at the top of the javascript file to show
 
 ### Known bugs
 - Main image on landing page is on some screen sizes causing an overflow. When the game is in play 
-the image is hidden and therefor do not have an effect on the game itself. 
+the image is hidden and therefor do not have an effect on the game itself. A smaller size of image will come out stretched and 
+up-pixelated instead. A better choice would then be to change to another image with different motif.
 - Target items is in some positions overflowing which causes the page to jump. This is due to incorrect sizing of viewport by DomRect and
 getBoundingClientRect in main.js. Improved performance by deleting 'wildcard' (margin and padding set to 0) in stylesheet css. Although 
 bug still remains.
-- Older versions of Safari have a bug when scaling with percentages and rem units in desktop view causing the start- and restart button to
-oversize and an excessive border-radius. Cause of action would be to change units to px. Added Media Query to override
-certain webkits for Safari, IE and Edge.
-- Older versions of Safari have problems with displaying png images.
+- Older versions of Safari have a bug when scaling with percentages and rem units in desktop view. Cause of action would be to change 
+units to px. Added Media Query to override certain webkits for Safari, IE and Edge.
+- Older versions of Safari have problems with displaying the main png image. Cause of action would be to use image of less size
+ and/or in another format than png. This, on the other hand, give the result of image becomming stretched and up-pixelated on **all** browsers. A last resort 
+ would be to change the main image completely to accomodate all browsers in all versions.
 ---
 ## Deployment
 
