@@ -172,7 +172,7 @@ bug still remains.
 - Older versions of Safari have a bug when scaling with percentages and rem units in desktop view causing the start- and restart button to
 oversize and an excessive border-radius. Cause of action would be to change units to px. Added Media Query to override
 certain webkits for Safari, IE and Edge.
-
+- Older versions of Safari have problems with displaying png images.
 ---
 ## Deployment
 
