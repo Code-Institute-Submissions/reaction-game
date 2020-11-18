@@ -164,10 +164,14 @@ I pasted ```/*jshint esversion: 6*/``` at the top of the javascript file to show
 - [Pineberry](https://www.pineberry.com/analysverktyg/resultat/Vw8vYZpv4xY_/) online SEO tester
 
 ### Known bugs
-- Main image on landing page is on some screen sizes causing an overflow. When the game is in play the image is not showing and therefor do not
-have an effect on the game itself.
-- Target items is in some positions overflowing with causes the page to jump. This is due to incorrect sizing of viewport by Domrect and
-getBoundingClientRect in main.js. Ongoing process.
+- Main image on landing page is on some screen sizes causing an overflow. When the game is in play 
+the image is hidden and therefor do not have an effect on the game itself. 
+- Target items is in some positions overflowing which causes the page to jump. This is due to incorrect sizing of viewport by DomRect and
+getBoundingClientRect in main.js. Improved performance by deleting 'wildcard' (margin and padding set to 0) in stylesheet css. Although 
+bug still remains.
+- Older versions of Safari have a bug when scaling with percentages and rem units in desktop view causing the start- and restart button to
+oversize and an excessive border-radius. Cause of action would be to change units to px. Added Media Query to override
+certain webkits for Safari, IE and Edge.
 
 ---
 ## Deployment
@@ -228,6 +232,9 @@ please visit this [Git Tutorial](https://www.atlassian.com/git/tutorials/setting
 Source of information and troubleshooting
 - [Atlassian Bitbucket](https://www.atlassian.com/git)
 <br>*General source of information.*
+- Indrek Paas, CodePen
+<br>*Source for Media Query to override older browser versions of Safari, IE and Edge to adapt
+% and rem units for scaling.*
 - Antonio Rodriguez, my mentor, general support and assistance in finding solution to end game.
 
 ### Content

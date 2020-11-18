@@ -5,10 +5,7 @@
 * Browsers: last 4 version
 */
 
-
-
 @import url('https://fonts.googleapis.com/css2?family=Galindo&family=Prompt:wght@200;300;400;500&display=swap');
-
 
 :root {
     font-size: 6.25%;
@@ -19,7 +16,7 @@ html, body {
             box-sizing: border-box;
     background-color: #fdfce7;
     font-size: 16rem;
-    height: 100vh;
+    height: 100%;
 }
 
 *, *::before, *::after {
@@ -100,7 +97,6 @@ html, body {
     font-weight: 300;
     font-size: 32rem;
     color: #333;
-    padding: 5rem;
     width: 40%;
     margin: auto;
     -ms-flex-item-align: start;
@@ -109,7 +105,6 @@ html, body {
 
 .cubeImg {
     width: 100%;
-    height: auto;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -401,4 +396,26 @@ html, body {
         width: 60%;
         height: 40%;
         }
+}
+
+ /** Below: to improve older browser versions of Safari,IE, Edge
+ Credit: Indrek Paas, CodePen
+ * 1. Apply rule to all browsers
+ * 2. Override WebKit browsers, because Safari needs percentages to work
+ * 3. Override IE/Edge, because Edge applies previous -webkit-calc() and 
+ *    won't work with percentages
+ */
+
+ @media screen and (min-width: 80em) {
+  html {
+    font-size: calc(0.875em + 0.25 * (100vw - 80em) / 40); /* 1 */
+    font-size: -webkit-calc(87.5% + 0.25 * (100vw - 8000%) / 40); /* 2 */
+    font-size: -ms-calc(0.875em + 0.25 * (100vw - 80em) / 40); /* 3 */
+  }
+}
+
+@media screen and (min-width: 120em) {
+  html {
+    font-size: 1.125em;
+  }
 }

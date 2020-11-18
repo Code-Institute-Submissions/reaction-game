@@ -10,8 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
  const heading = document.querySelector(".heading");
  const pText = document.querySelector(".pText");
  const scoreText = document.querySelector(".scoreText");
- //var viewportWidth = window.innerWidth + "px";
- //var viewportHeight = window.innerHeight + "px";
  
  let divtimer;
  let currentDiv;
@@ -58,22 +56,6 @@ catch(err) {
     div.style.backgroundColor = "#"+Math.random().toString(16).substr(-6);
     div.style.border = "1px solid black";
     div.startTime = Date.now();
-
-/* 
-Actually one thing you could consider....
-Use JS to calculate the width of the viewport, 
-and then when assigning the location of the box, 
-then use that width and subtract a certain value 
-(the box size itself, plus maybe a few extra px so 
-it doesn't does the right-wall)
-
-You can check wether the value calculated for the x and y 
-positions exceed the innerWidth or innerHeight values. 
-If it does, decrease it by a set amount of pixels, like 50 or 
-something like that. If you want to get fancy, you can even 
-calculated the difference between your generated x and y values 
-and the window size and adjust the values to fit inside it
-*/
 
 //Measure reactiontime and display on page as score
 div.addEventListener("click", function() {
